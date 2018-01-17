@@ -89,6 +89,14 @@ public:
                                      const int outNum,
                                      const int gradNum,
 									 const float thresVal) const = 0;
+
+    CV_WRAP virtual void getFeaturesFast(const Mat &src, Mat &features, cv::Mat &edgeMask,
+                                         const int gnrmRad,
+                                         const int gsmthRad,
+                                         const int shrink,
+                                         const int outNum,
+                                         const int gradNum,
+    									 const float thresVal) const = 0;
 };
 
 CV_EXPORTS_W Ptr<RFFeatureGetter> createRFFeatureGetter();

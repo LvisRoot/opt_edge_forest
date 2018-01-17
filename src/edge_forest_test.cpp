@@ -120,7 +120,7 @@ public:
 
 		cv::resize(cv_ptr->image, smallDst, size);
 
-		smallDst.convertTo(smallDst, cv::DataType<float>::type, 1 / 255.0);
+		//smallDst.convertTo(smallDst, cv::DataType<float>::type, 1 / 255.0);
 		cv::Mat edges(smallDst.size(), smallDst.type());
 
 		pDollar->detectEdges(smallDst, edges, threshold_value/255.0);
